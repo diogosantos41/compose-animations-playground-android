@@ -12,6 +12,7 @@ import androidx.navigation.compose.composable
 import com.dscoding.composeanimationsplayground.features.AnimatedProgressIndicatorScreen
 import com.dscoding.composeanimationsplayground.features.HomeScreen
 import com.dscoding.composeanimationsplayground.features.LiquidBottomBarScreen
+import com.dscoding.composeanimationsplayground.features.LoadingAnimationsScreen
 import com.dscoding.composeanimationsplayground.features.LottieAnimationScreen
 import com.dscoding.composeanimationsplayground.features.RainbowBorderScreen
 import com.dscoding.composeanimationsplayground.features.rainbowColorsBrush
@@ -38,6 +39,9 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
             }
             composable(route = Screen.AnimatedProgressIndicator.route) {
                 AnimatedProgressIndicatorScreen()
+            }
+            composable(route = Screen.LoadingAnimations.route) {
+                LoadingAnimationsScreen()
             }
         }
     }
