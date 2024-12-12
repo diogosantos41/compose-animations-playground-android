@@ -28,6 +28,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
@@ -233,7 +234,8 @@ fun TopAppBarUI(screen: NavigationItem, onMenuToggle: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(16.dp)
+            .padding(top = 30.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
@@ -251,6 +253,7 @@ fun TopAppBarUI(screen: NavigationItem, onMenuToggle: () -> Unit) {
         Text(
             text = screen.title,
             fontSize = 18.sp,
+            color = Color.Black,
             fontWeight = FontWeight.Bold,
         )
     }
