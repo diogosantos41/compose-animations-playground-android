@@ -1,21 +1,18 @@
 package com.dscoding.composeanimationsplayground.navigation
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.dscoding.composeanimationsplayground.features.AnimatedProgressIndicatorScreen
+import com.dscoding.composeanimationsplayground.features.DVDAnimationScreen
 import com.dscoding.composeanimationsplayground.features.HomeScreen
 import com.dscoding.composeanimationsplayground.features.LiquidBottomBarScreen
 import com.dscoding.composeanimationsplayground.features.LoadingAnimationsScreen
 import com.dscoding.composeanimationsplayground.features.LottieAnimationScreen
 import com.dscoding.composeanimationsplayground.features.RainbowBorderScreen
-import com.dscoding.composeanimationsplayground.features.rainbowColorsBrush
 
 @Composable
 fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) {
@@ -37,11 +34,14 @@ fun Navigation(navController: NavHostController, modifier: Modifier = Modifier) 
             composable(route = Screen.LiquidBottomBarScreen.route) {
                 LiquidBottomBarScreen()
             }
-            composable(route = Screen.AnimatedProgressIndicator.route) {
+            composable(route = Screen.AnimatedProgressIndicatorScreen.route) {
                 AnimatedProgressIndicatorScreen()
             }
-            composable(route = Screen.LoadingAnimations.route) {
+            composable(route = Screen.LoadingAnimationsScreen.route) {
                 LoadingAnimationsScreen()
+            }
+            composable(route = Screen.DVDAnimationScreen.route) {
+                DVDAnimationScreen()
             }
         }
     }
